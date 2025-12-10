@@ -14,16 +14,16 @@
         </header>
         <main>
 
-            <section class="bloc">
-                <p>Nom de l'utilisateur:</p><p> {{ user_name }}</p>
-                <p>Nom de la machine:</p><p> {{machine}}</p>
-                <p>Système d'exploitation:</p></p> {{exploitation}}</p>
-                <p>Uptime: </p><p>{{uptime}}</p>
-                <p>Nombre d'utilisateurs: </p><p>{{user}}</p>
+            <section id="Systeme">
+
+                <p>Nom de la machine: {{machine}}</p>
+                <p>Système d'exploitation: {{exploitation}}</p>
+                <p>Uptime: {{uptime}}</p>
+                <p>Nombre d'utilisateurs: {{user}}</p>
 
             </section>
 
-            <section class="bloc">
+            <section id="CPU">
 
                 <p>Nombre de coeurs:</p><p> {{coeur}}</p>
                 <p>Fréquence:</p><p> {{frequence}}</p>
@@ -31,7 +31,7 @@
 
             </section>
 
-            <section class="bloc">
+            <section id="Memoire">
 
                 <p>Ram totale:</p><p> {{totale}}</p>
                 <p>Ram utilisée: </p><p>{{used}}</p>
@@ -45,13 +45,19 @@
 
             </section>
 
-            <section class="bloc1">
+            <section id="Reseau">
+
+                <p>Adresse ip principale: {{ip}}</p>
+
+            </section>
+
+            <section id="Processus">
 
                 <p>Top 3 des processeurs les plus gourmands: {{gourmand}}</p>
 
             </section>
 
-            <section class="bloc1">
+            <section id="Fichiers">
 
                 <p>Statistique sur les types de fichiers analysés: {{analyse}}</p>
 
