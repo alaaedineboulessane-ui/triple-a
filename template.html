@@ -4,59 +4,64 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Triple A</title>
+        <link rel="stylesheet" href="/template.css">
+        <link rel="stylesheet" href="/monitor.py">
 </head>
     <body>
+        <div id="top"></div>
         <header>
-
+            <h1>PC Debian</h1>
         </header>
         <main>
 
-            <section>
-
-                <p>Nom de la machine: {{machine}}</p>
-                <p>Système d'exploitation: {{exploitation}}</p>
-                <p>Uptime: {{uptime}}</p>
-                <p>Nombre d'utilisateurs: {{user}}</p>
-
-            </section>
-
-            <section>
-
-                <p>Nombre de coeurs: {{coeur}}</p>
-                <p>Fréquence: {{frequence}}</p>
-                <p>Pourcentage d'utilisation: {{utilisation}}</p>
+            <section class="bloc">
+                <p>Nom de l'utilisateur:</p><p> {{ user_name }}</p>
+                <p>Nom de la machine:</p><p> {{machine}}</p>
+                <p>Système d'exploitation:</p></p> {{exploitation}}</p>
+                <p>Uptime: </p><p>{{uptime}}</p>
+                <p>Nombre d'utilisateurs: </p><p>{{user}}</p>
 
             </section>
 
-            <section>
+            <section class="bloc">
 
-                <p>Ram totale: {{totale}}</p>
-                <p>Ram utilisée: {{used}}</p>
-                <p>Pourcentage: {{used1}}</p>
-
-            </section>
-
-            <section>
-
-                <p>Adresse ip principale: {{ip}}</p>
+                <p>Nombre de coeurs:</p><p> {{coeur}}</p>
+                <p>Fréquence:</p><p> {{frequence}}</p>
+                <p>Pourcentage d'utilisation: </p><p>{{utilisation}}</p>
 
             </section>
 
-            <section>
+            <section class="bloc">
+
+                <p>Ram totale:</p><p> {{totale}}</p>
+                <p>Ram utilisée: </p><p>{{used}}</p>
+                <p>Pourcentage:</p><p> {{used1}}</p>
+
+            </section>
+            <section class="bloc1">
+            <section class="bloc1">
+
+                <p>Adresse ip principale:  {{ip}}</p>
+
+            </section>
+
+            <section class="bloc1">
 
                 <p>Top 3 des processeurs les plus gourmands: {{gourmand}}</p>
 
             </section>
 
-            <section>
+            <section class="bloc1">
 
                 <p>Statistique sur les types de fichiers analysés: {{analyse}}</p>
 
             </section>
-
+            </section>
+            
         </main>
 
         <footer>
+            <a href="#top" class="back-to-top">⬆ Retour en haut</a>
 
         </footer>
 
