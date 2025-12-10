@@ -5,6 +5,7 @@ import time
 import os
 from flask import Flask, render_template
 
+
 machine = socket.gethostname()
 exploitation = platform.system() + " " + platform.release()
 uptime = int(time.time() - psutil.boot_time())
@@ -56,9 +57,45 @@ def tri(liste):
     return top
 
 l = tri(proc)
-print(l)
+
+dossier = "C:/Users/aladi/OneDrive/Bureau/Documents"
+
+def tipe(objet):
+    return os.path.splitext(objet)[1].lower()
 
 
+
+txt = 0
+pdf = 0
+jpg = 0
+webp = 0
+ahk = 0
+url = 0
+docx = 0
+unknown = 0
+doss = 0
+
+for item in os.listdir(dossier):
+    chemin_complet = os.path.join(dossier, item)
+    if os.path.isfile(chemin_complet):
+        if tipe(item) == ".txt":
+            txt += 1
+        elif tipe(item) == ".pdf":
+            pdf += 1
+        elif tipe(item) == ".jpg":
+            jpg += 1
+        elif tipe(item) == ".webp":
+            webp += 1
+        elif tipe(item) == ".ahk":
+            ahk += 1
+        elif tipe(item) == ".url":
+            url +=1
+        elif tipe(item) == ".docx":
+            docx += 1
+    elif os.path.isdir(chemin_complet):
+        doss +=1
+
+print(txt)
 
 ip = socket.gethostbyname(socket.gethostname())
 
@@ -82,9 +119,4 @@ html = html.replace("{{gourmand}}", str(l[0]) + "  " + str(l[1]) + "  " +str(l[2
 with open("result.html", "w", encoding="utf-8") as f:
     f.write(html)
 
-@app.route("/")
-def home():
-    user_name = "Alice"
-    return render_template("template.html", user_name=user_name)
 
-app.run()
