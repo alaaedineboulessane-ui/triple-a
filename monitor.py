@@ -21,18 +21,44 @@ used1 = mem.percent
 
 gour = list(psutil.process_iter(["pid", "name", "cpu_percent"]))
 
+proc = []
+for p in psutil.process_iter(['name']):
+    try:
+        p.cpu_percent(interval=None)
+    except (psutil.NoSuchProcess, psutil.AccessDenied):
+        continue
 
-def tri3(liste):
-    proc = []
-    for p in psutil.process_iter(['name', 'cpu_percent']):
-        proc.append([p.info['name'],[p.info["cpu_percent"]]])
-    copie = []
+time.sleep(1)
+
+for p in psutil.process_iter(['name']):
+    try:
+        cpu = p.cpu_percent(interval=None)
+        proc.append([p.info['name'], [cpu]])
+    except (psutil.NoSuchProcess, psutil.AccessDenied):
+        continue
+
+def max_proc(liste):
+    m = liste[0]
+    for elem in liste:
+        if elem[1][0] > m[1][0]:
+            m = elem
+    return m
+
+def tri(liste):
+    liste1 = []
+    top = []
+    while liste:
+        m = max_proc(liste)
+        liste1.append(m)
+        liste.remove(m)
     for i in range(3):
-        if proc[i-1][1] > proc[i][1]:
-            copie.append(proc[i][1])
-    return copie
+        top.append(liste1[i])
+    return top
 
-print(tri3(gour))
+l = tri(proc)
+print(l)
+
+
 
 ip = socket.gethostbyname(socket.gethostname())
 
@@ -45,11 +71,12 @@ html = html.replace("{{uptime}}", str(uptime))
 html = html.replace("{{user}}", str(user))
 html = html.replace("{{coeur}}", str(coeur))
 html = html.replace("{{frequence}}", str(frequence))
-html = html.replace("{{utilisation}}", str(utilisation))
-html = html.replace("{{totale}}", str(totale))
-html = html.replace("{{used}}", str(used))
-html = html.replace("{{used1}}", str(used1))
+html = html.replace("{{utilisation}}", str(utilisation) + "%")
+html = html.replace("{{totale}}", str(totale) + "go")
+html = html.replace("{{used}}", str(used) + "go")
+html = html.replace("{{used1}}", str(used1) + "%")
 html = html.replace("{{ip}}", ip)
+html = html.replace("{{gourmand}}", str(l[0]) + "  " + str(l[1]) + "  " +str(l[2]))
 
 
 with open("result.html", "w", encoding="utf-8") as f:
