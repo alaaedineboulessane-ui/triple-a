@@ -65,15 +65,7 @@ def tipe(objet):
 
 
 
-txt = 0
-pdf = 0
-jpg = 0
-webp = 0
-ahk = 0
-url = 0
-docx = 0
-unknown = 0
-doss = 0
+
 
 def compte(dossier):
     l = [0,0,0,0,0,0,0,0]
@@ -111,7 +103,7 @@ def pourcent(liste):
     pourcent_url = round(liste[5] / total * 100)
     pourcent_docx = round(liste[6] / total * 100)
     pourcent_dossier = round(liste[7] / total * 100)
-    return [pourcent_txt, pourcent_pdf, pourcent_jpg,pourcent_wepb, pourcent_ahk, pourcent_url, pourcent_docx, pourcent_dossier] 
+    return [pourcent_txt, pourcent_pdf, pourcent_jpg, pourcent_wepb, pourcent_ahk, pourcent_url, pourcent_docx, pourcent_dossier] 
 
 ip = socket.gethostbyname(socket.gethostname())
 
