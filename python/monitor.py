@@ -8,7 +8,7 @@ from flask import Flask, render_template
 
 machine = socket.gethostname()
 exploitation = platform.system() + " " + platform.release()
-uptime = int(time.time() - psutil.boot_time())
+uptime = int(time.time() - psutil.boot_time())//60
 user = len(psutil.users())
 
 coeur = os.cpu_count()
@@ -112,7 +112,7 @@ with open("template.html", "r", encoding="utf-8") as f:
 
 html = html.replace("{{machine}}", machine)
 html = html.replace("{{exploitation}}", exploitation)
-html = html.replace("{{uptime}}", str(uptime))
+html = html.replace("{{uptime}}", str(uptime) + " minutes")
 html = html.replace("{{user}}", str(user))
 html = html.replace("{{coeur}}", str(coeur))
 html = html.replace("{{frequence}}", str(frequence))
