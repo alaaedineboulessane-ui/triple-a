@@ -83,6 +83,10 @@ Les données sont injectées dans un template afin de produire un dashboard visu
 
 ## 🖼️ Captures d'écran
 
+Première photo [GitHub](/images/image2.png).
+Deuxième photo [GitHub](/images/image3.png).
+Troisième photo [GitHub](/images/image4.png).
+Quatrième photo [GitHub](/images/image5.png).
 
 
 ## ⚠️ Difficultés rencontrées
@@ -103,7 +107,7 @@ Quelques points ont pu poser problème :
 - Ajouter une API pour exposer les données système.
 
 ## 👤 Auteur
-**Nom :Boulessane Alaaedine, Baili Anas**
+**Nom : Boulessane Alaaedine, Baili Anas**
 **Projet :** Challenge Triple A  
 **Année :** 2025
 
