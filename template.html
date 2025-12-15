@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Triple A</title>
+        <link rel="stylesheet" href="/template.css">
+    </head>
+    <body>
+        <div id="top"></div>
+        <header>
+            <h1>PC Debian</h1>
+        </header>
+        <main>
+
+            <section id="Systeme" class="bloc">
+
+                <p>Nom de la machine: {{machine}}</p>
+                <p>Système d'exploitation: {{exploitation}}</p>
+                <p>Uptime: {{uptime}}</p>
+                <p>Nombre d'utilisateurs: {{user}}</p>
+
+            </section>
+
+            <section id="CPU" class="bloc">
+
+                <p>Nombre de coeurs: {{coeur}}</p>
+                <p>Fréquence: {{frequence}}</p>
+                <p>Pourcentage d'utilisation:{{cpu}}</p>
+
+            </section>
+
+            <section id="Memoire" class="bloc">
+
+                <p>Ram totale: {{ram.total}}</p>
+                <p>Ram utilisée: {{ram.used}}</p>
+                <p>Pourcentage: {{ram.pourcent}}</p>
+
+            </section>
+            <section class="bloc1">
+
+                <p>Adresse ip principale:  {{ip}}</p>
+
+            </section>
+
+            <section id="Processus">
+
+                <p>Top 3 des processeurs les plus gourmands: {{gourmand}}</p>
+
+            </section>
+
+            <section id="Fichiers"class="bloc">
+
+                <p>Statistique sur les types de fichiers analysés: {{analyse}}</p>
+
+            </section>
+            </section>
+            
+        </main>
+
+        <footer>
+
+            <a href="#top" class="back-to-top">⬆ Retour en haut</a>
+
+        </footer>
+
+    </body>
+</html>
