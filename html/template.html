@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Triple A</title>
-        <link rel="stylesheet" href="../css/template.css">
-    </head>
-    <body>
-        <div id="top"></div>
-        <header>
-            <h1>Informations du PC</h1>
-        </header>
-        <main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple A</title>
+    <link rel="stylesheet" href="../css/template.css">
+    <meta http-equiv="refresh" content="30">
+</head>
+<body>
+    <header>
+        <h1>Informations du PC</h1>
+    </header>
+    <main>
+        <section id="Systeme" class="bloc">
+            <p><strong>Nom de la machine:</strong> {{machine}}</p>
+            <p><strong>Système:</strong> {{exploitation}}</p>
+            <p><strong>Uptime:</strong> {{uptime}}</p>
+            <p><strong>Utilisateurs:</strong> {{user}}</p>
+            <p><strong>Load moyen (approx):</strong> {{loadavg}}</p>
+        </section>
 
-            <section id="Systeme" class="bloc">
+        <section id="CPU" class="bloc">
+            <p><strong>Nombre de coeurs:</strong> {{coeur}}</p>
+            <p><strong>Fréquence:</strong> {{frequence}}</p>
+            <p><strong>Utilisation par coeur:</strong></p>
+            {{utilisation}}
+        </section>
 
-                <p>Nom de la machine: {{machine}}</p>
-                <p>Système d'exploitation: {{exploitation}}</p>
-                <p>Uptime: {{uptime}}</p>
-                <p>Nombre d'utilisateurs: {{user}}</p>
+        <section id="Memoire" class="bloc">
+            <p><strong>RAM totale:</strong> {{totale}}</p>
+            <p><strong>RAM utilisée:</strong> {{used}}</p>
+            <p><strong>Pourcentage:</strong></p>
+            {{used1}}
+        </section>
 
-            </section>
+        <section id="Disque" class="bloc">
+            <p><strong>Disque total:</strong> {{disk_total}}</p>
+            <p><strong>Disque utilisé:</strong> {{disk_used}}</p>
+            <p><strong>Pourcentage utilisé:</strong></p>
+            {{disk_percent}}
+        </section>
 
-            <section id="CPU" class="bloc">
+        <section class="bloc">
+            <p><strong>Adresse IP:</strong> {{ip}}</p>
+        </section>
 
-                <p>Nombre de coeurs: {{coeur}}</p>
-                <p>Fréquence: {{frequence}}</p>
-                <p>Pourcentage d'utilisation:{{utilisation}}</p>
+        <section id="Processus" class="bloc">
+            <p><strong>Top 3 des processus gourmands:</strong></p>
+            <p>{{gourmand}}</p>
+        </section>
 
-            </section>
-
-            <section id="Memoire" class="bloc">
-
-                <p>Ram totale: {{totale}}</p>
-                <p>Ram utilisée: {{used}}</p>
-                <p>Pourcentage: {{used1}}</p>
-
-            </section>
-            <section class="bloc1">
-
-                <p>Adresse ip principale:  {{ip}}</p>
-
-            </section>
-
-            <section id="Processus">
-
-                <p>Top 3 des processeurs les plus gourmands: {{gourmand}}</p>
-
-            </section>
-
-            <section id="Fichiers"class="bloc">
-
-                <p>Statistique sur les types de fichiers analysés: {{analyse}}</p>
-
-            </section>
-            </section>
-            
-        </main>
-
-        <footer>
-
-            <a href="#top" class="back-to-top">⬆ Retour en haut</a>
-
-        </footer>
-
-    </body>
+        <section id="Fichiers" class="bloc">
+            <p><strong>Statistiques fichiers:</strong></p>
+            <p>{{analyse}}</p>
+            <p><strong>Fichiers volumineux:</strong></p>
+            <p>{{largest_files}}</p>
+        </section>
+    </main>
+    <a href="#top" class="back-to-top">⬆ Retour en haut</a>
+</body>
 </html>

@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Triple A</title>
-        <link rel="stylesheet" href="../css/template.css">
-    </head>
-    <body>
-        <div id="top"></div>
-        <header>
-            <h1>Informations du PC</h1>
-        </header>
-        <main>
+<head>
+<meta http-equiv='refresh' content='30'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triple A</title>
+    <link rel="stylesheet" href="../css/template.css">
+    <meta http-equiv="refresh" content="30">
+</head>
+<body>
+    <header>
+        <h1>Informations du PC</h1>
+    </header>
+    <main>
+        <section id="Systeme" class="bloc">
+            <p><strong>Nom de la machine:</strong> Machine</p>
+            <p><strong>Système:</strong> Windows 11</p>
+            <p><strong>Uptime:</strong> 7782 minutes</p>
+            <p><strong>Utilisateurs:</strong> 1</p>
+            <p><strong>Load moyen (approx):</strong> 9.0%, 4.9%, 9.1%</p>
+        </section>
 
-            <section id="Systeme" class="bloc">
+        <section id="CPU" class="bloc">
+            <p><strong>Nombre de coeurs:</strong> 16</p>
+            <p><strong>Fréquence:</strong> 2300.00 MHz</p>
+            <p><strong>Utilisation par coeur:</strong></p>
+            <div class='gauge'><div class='fill' style='width:13.4%; background-color:green'></div><span>13.4%</span></div>
+<div class='gauge'><div class='fill' style='width:0.0%; background-color:green'></div><span>0.0%</span></div>
+<div class='gauge'><div class='fill' style='width:6.1%; background-color:green'></div><span>6.1%</span></div>
+<div class='gauge'><div class='fill' style='width:3.1%; background-color:green'></div><span>3.1%</span></div>
+<div class='gauge'><div class='fill' style='width:9.2%; background-color:green'></div><span>9.2%</span></div>
+<div class='gauge'><div class='fill' style='width:1.6%; background-color:green'></div><span>1.6%</span></div>
+<div class='gauge'><div class='fill' style='width:18.8%; background-color:green'></div><span>18.8%</span></div>
+<div class='gauge'><div class='fill' style='width:0.0%; background-color:green'></div><span>0.0%</span></div>
+<div class='gauge'><div class='fill' style='width:4.6%; background-color:green'></div><span>4.6%</span></div>
+<div class='gauge'><div class='fill' style='width:1.5%; background-color:green'></div><span>1.5%</span></div>
+<div class='gauge'><div class='fill' style='width:4.7%; background-color:green'></div><span>4.7%</span></div>
+<div class='gauge'><div class='fill' style='width:0.0%; background-color:green'></div><span>0.0%</span></div>
+<div class='gauge'><div class='fill' style='width:0.0%; background-color:green'></div><span>0.0%</span></div>
+<div class='gauge'><div class='fill' style='width:0.0%; background-color:green'></div><span>0.0%</span></div>
+<div class='gauge'><div class='fill' style='width:4.6%; background-color:green'></div><span>4.6%</span></div>
+<div class='gauge'><div class='fill' style='width:4.6%; background-color:green'></div><span>4.6%</span></div>
+        </section>
 
-                <p>Nom de la machine: Machine</p>
-                <p>Système d'exploitation: Windows 11</p>
-                <p>Uptime: 3502 minutes</p>
-                <p>Nombre d'utilisateurs: 1</p>
+        <section id="Memoire" class="bloc">
+            <p><strong>RAM totale:</strong> 15 Go</p>
+            <p><strong>RAM utilisée:</strong> 12 Go</p>
+            <p><strong>Pourcentage:</strong></p>
+            <div class='gauge'><div class='fill' style='width:77.3%; background-color:orange'></div><span>77.3%</span></div>
+        </section>
 
-            </section>
+        <section id="Disque" class="bloc">
+            <p><strong>Disque total:</strong> 475 Go</p>
+            <p><strong>Disque utilisé:</strong> 367 Go</p>
+            <p><strong>Pourcentage utilisé:</strong></p>
+            <div class='gauge'><div class='fill' style='width:77.3%; background-color:orange'></div><span>77.3%</span></div>
+        </section>
 
-            <section id="CPU" class="bloc">
+        <section class="bloc">
+            <p><strong>Adresse IP:</strong> 10.10.12.61</p>
+        </section>
 
-                <p>Nombre de coeurs: 16</p>
-                <p>Fréquence: 1506.0</p>
-                <p>Pourcentage d'utilisation:9.9%</p>
+        <section id="Processus" class="bloc">
+            <p><strong>Top 3 des processus gourmands:</strong></p>
+            <p>System Idle Process : 1517.4%<br>python.exe : 36.5%<br>System : 9.0%</p>
+        </section>
 
-            </section>
-
-            <section id="Memoire" class="bloc">
-
-                <p>Ram totale: 15go</p>
-                <p>Ram utilisée: 10go</p>
-                <p>Pourcentage: 69.7%</p>
-
-            </section>
-            <section class="bloc1">
-
-                <p>Adresse ip principale:  10.10.4.128</p>
-
-            </section>
-
-            <section id="Processus">
-
-                <p>Top 3 des processeurs les plus gourmands: ['System Idle Process', [1555.8]]  ['python.exe', [32.3]]  ['System', [7.1]]</p>
-
-            </section>
-
-            <section id="Fichiers"class="bloc">
-
-                <p>Statistique sur les types de fichiers analysés: [0, 23, 8, 2, 0, 1, 53, 13]</p>
-
-            </section>
-            </section>
-            
-        </main>
-
-        <footer>
-
-            <a href="#top" class="back-to-top">⬆ Retour en haut</a>
-
-        </footer>
-
-    </body>
+        <section id="Fichiers" class="bloc">
+            <p><strong>Statistiques fichiers:</strong></p>
+            <p>.txt: 4%<br>.pdf: 5%<br>.jpg: 2%<br>.webp: 0%<br>.ahk: 2%<br>.url: 0%<br>.docx: 11%<br>.png: 3%<br>.mp4: 0%<br>.csv: 0%<br>dossier: 73%</p>
+            <p><strong>Fichiers volumineux:</strong></p>
+            <p>C:/Users/aladi/OneDrive/Bureau/Documents\Virtual Machines\Windows 11 x64 (4)\Windows 11 x64 (4)-s001.vmdk (4162048 KB)<br>C:/Users/aladi/OneDrive/Bureau/Documents\Virtual Machines\Windows 11 x64 (4)\Windows 11 x64 (4)-s002.vmdk (4162048 KB)<br>C:/Users/aladi/OneDrive/Bureau/Documents\Virtual Machines\Windows 11 x64 (4)\Windows 11 x64 (4)-s005.vmdk (4154368 KB)<br>C:/Users/aladi/OneDrive/Bureau/Documents\Virtual Machines\Windows 11 x64 (4)\Windows 11 x64 (4)-s004.vmdk (4147648 KB)<br>C:/Users/aladi/OneDrive/Bureau/Documents\Virtual Machines\Windows 11 x64 (4)\Windows 11 x64 (4)-s003.vmdk (4145600 KB)</p>
+        </section>
+    </main>
+    <a href="#top" class="back-to-top">⬆ Retour en haut</a>
+</body>
 </html>
